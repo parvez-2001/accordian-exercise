@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+   background-color: gold;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.column_first,
+.column_second {
+    flex: 1;
+    min-width: 300px;
+}
+
+.first,
+.second {
+    background: deepskyblue;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 1px;
+}
+
+.accordion-item {
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion-header {
+background: blue;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.accordion-header:hover {
+    background: #212529;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    padding: 0 1rem;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-body input {
+    width: 100%;
+    padding: 0.2rem;
+    margin: 1rem 0rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 150px;
+    padding: 1rem;
+}
